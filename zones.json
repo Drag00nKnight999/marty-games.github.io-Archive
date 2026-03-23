@@ -2,7 +2,7 @@
     {
         "id": -1,
         "name": "[!] SUGGEST GAMES .gg/F8kc4FKjnw",
-        "cover": "{COVER_URL}/dc.png",
+        "cover": "{COVER_URL}mga-apps/discord-widget/icon.png",
         "url": "https://discord.gg/F8kc4FKjnw"
     },
     {
@@ -80,6 +80,17 @@
         "authorLink": "https://doomz.io/",
         "special": [
             "Unity"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Discord (Widget)",
+        "cover": "{HTML_URL}mga-apps@main/discord-widget/icon.png",
+        "url": "{HTML_URL}mga-apps@main/discord-widget/index.html",
+        "author": "Marty Games",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Apps"
         ]
     }
 ]
