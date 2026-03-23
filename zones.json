@@ -8,8 +8,8 @@
     {
         "id": 0,
         "name": "[!] Community Chat",
-        "cover": "{COVER_URL}",
-        "url": "{HTML_URL}",
+        "cover": "{HTML_URL}mga-apps@main/padlet/icon.png",
+        "url": "{HTML_URL}mga-apps@main/padlet/index.html",
         "author": "Marty Games",
         "authorLink": "https://marty-games.github.io/",
         "special": [
