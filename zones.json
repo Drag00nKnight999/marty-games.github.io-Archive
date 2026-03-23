@@ -38,4 +38,15 @@
             "Unity"
         ]
     }
+    {
+        "id": 3,
+        "name": "Geometry Dash SubZero (Remake)",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-subzero/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-subzero/index.html",
+        "author": "RobTop",
+        "authorLink": "https://geometrydash.com/",
+        "special": [
+            "Unity"
+        ]
+    }
 ]
