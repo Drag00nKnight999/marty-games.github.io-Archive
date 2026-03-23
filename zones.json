@@ -48,5 +48,38 @@
         "special": [
             "Unity"
         ]
+    },
+    {
+        "id": 4,
+        "name": "Gorilla Tag",
+        "cover": "{HTML_URL}mga-unity@main/gorilla-tag/icon.png",
+        "url": "{HTML_URL}mga-unity@main/gorilla-tag/index.html",
+        "author": "Another Axiom",
+        "authorLink": "https://www.gorillatagvr.com/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Doblox",
+        "cover": "{HTML_URL}mga-unity@main/doblox/icon.png",
+        "url": "{HTML_URL}mga-unity@main/doblox/index.html",
+        "author": "Yandex",
+        "authorLink": "https://www.yandex.com/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Doomz.io",
+        "cover": "{HTML_URL}mga-unity@main/doomz-io/icon.png",
+        "url": "{HTML_URL}mga-unity@main/doomz-io/index.html",
+        "author": "FuryLine",
+        "authorLink": "https://doomz.io/",
+        "special": [
+            "Unity"
+        ]
     }
 ]
