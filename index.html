@@ -31,7 +31,7 @@
     <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7152030975429244" crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-7152030975429244">
     <script async src="https://fundingchoicesmessages.google.com/i/pub-7152030975429244?ers=1"></script>
-    
+
     <script>
         (function() {
             function signalGooglefcPresent() {
@@ -740,17 +740,17 @@
         </div>
     </div>
 
-    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-5521219086088837" data-ad-slot="5549138288" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7152030975429244" data-ad-slot="5549138288" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     <footer>
         <div class="footer-links">
+            <a href="#" onclick="loadCredits(); return false;">Credits</a>
             <a href="#" onclick="loadDMCA(); return false;">DMCA</a>
             <a href="#" onclick="showContact(); return false;">Contact</a>
             <a href="#" onclick="loadPrivacy(); return false;">Privacy Policy</a>
             <a href="javascript:saveData()">Export Data</a>
-            <a href="/archive/index.html">Old site</a>
             <a href="#" onclick="document.getElementById('importData').click(); return false;">Import Data</a>
             <input type="file" id="importData" style="display: none;" onchange="loadData(event)">
         </div>
@@ -1356,6 +1356,16 @@
             popupBody.innerHTML = `
     <p>Discord: https://discord.gg/F8kc4FKjnw</p>
     <p>Email: [email protected]</p>`;
+            popupBody.contentEditable = false;
+            document.getElementById('popupOverlay').style.display = "flex";
+        }
+
+        function loadCredits() {
+            document.getElementById('popupTitle').textContent = "Credits";
+            const popupBody = document.getElementById('popupBody');
+            popupBody.innerHTML = `
+    <p>This site was originally made by <a href="https://github.com/genizy">Genizy</a>, and remade by <a href="https://github.com/martinmmcyt">Martin_MMC</a> and <a href="https://github.com/Drag00nKnight999">Drag00nKnight999</a>.</p>
+    <p>We do not claim ownership of these games. All games belong to their respected owners.</p>`;
             popupBody.contentEditable = false;
             document.getElementById('popupOverlay').style.display = "flex";
         }
