@@ -1,0 +1,41 @@
+[
+    {
+        "id": -1,
+        "name": "[!] SUGGEST GAMES .gg/F8kc4FKjnw",
+        "cover": "{COVER_URL}/dc.png",
+        "url": "https://discord.gg/F8kc4FKjnw"
+    },
+    {
+        "id": 0,
+        "name": "[!] Community Chat",
+        "cover": "{COVER_URL}/599.png",
+        "url": "{HTML_URL}/599.html",
+        "author": " Konami Computer Entertainment Japan",
+        "authorLink": "https://www.konami.com/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Dashmetry",
+        "cover": "https://cdn.jsdelivr.net/gh/marty-games/mga-unity@main/dashmetry/icon.png",
+        "url": "https://cdn.jsdelivr.net/gh/marty-games/mga-unity@main/dashmetry/index.html",
+        "author": "1games.io",
+        "authorLink": "https://1games.io/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "R. E. P. O",
+        "cover": "https://cdn.jsdelivr.net/gh/marty-games/mga-unity@main/repo/icon.png",
+        "url": "https://cdn.jsdelivr.net/gh/marty-games/mga-unity@main/repo/index.html",
+        "author": "Semiwork",
+        "authorLink": "https://semiwork.se/",
+        "special": [
+            "Unity"
+        ]
+    }
+]
