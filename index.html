@@ -65,10 +65,10 @@
     <meta name="twitter:description" content="Play unbl*cked games like Geometry Dash and Gorilla Tag on Marty Games. Fast, free, no downloads—perfect for school or home.">
     <style>
         :root {
-            --primary: #fc2651;
-            --primary-hover: #e91e47;
-            --primary-light: rgba(252, 38, 81, 0.1);
-            --primary-lighter: rgba(252, 38, 81, 0.05);
+            --primary: #00ffff;
+            --primary-hover: #00e6e6;
+            --primary-light: rgba(0, 255, 255, 0.1);
+            --primary-lighter: rgba(0, 255, 255, 0.05);
             --accent: #8b5cf6;
             --accent-light: rgba(139, 92, 246, 0.1);
             --success: #10b981;
@@ -83,26 +83,17 @@
             --border: #e2e8f0;
             --border-light: #f1f5f9;
             --glass: rgba(255, 255, 255, 0.8);
-            --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            --shadow-glow: 0 0 20px rgba(252, 38, 81, 0.3);
-            --radius: 12px;
-            --radius-sm: 8px;
-            --radius-lg: 16px;
-            --radius-xl: 20px;
-            --gradient-primary: linear-gradient(135deg, #fc2651 0%, #e91e47 100%);
+            --shadow-glow: 0 0 20px rgba(0, 255, 255, 0.3);
+            --gradient-primary: linear-gradient(135deg, #00ffff 0%, #00e6e6 100%);
             --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
             --gradient-surface: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
         }
 
         .dark-mode {
-            --primary: #fc2651;
-            --primary-hover: #ff4d75;
-            --primary-light: rgba(252, 38, 81, 0.15);
-            --primary-lighter: rgba(252, 38, 81, 0.08);
+            --primary: #00ffff;
+            --primary-hover: #66ffff;
+            --primary-light: rgba(0, 255, 255, 0.15);
+            --primary-lighter: rgba(0, 255, 255, 0.08);
             --accent: #a855f7;
             --accent-light: rgba(168, 85, 247, 0.15);
             --success: #34d399;
@@ -117,13 +108,8 @@
             --border: #334155;
             --border-light: #475569;
             --glass: rgba(30, 41, 59, 0.8);
-            --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.4);
-            --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.5), 0 1px 2px -1px rgb(0 0 0 / 0.5);
-            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.6), 0 4px 6px -4px rgb(0 0 0 / 0.6);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.7), 0 8px 10px -6px rgb(0 0 0 / 0.7);
-            --shadow-glow: 0 0 20px rgba(252, 38, 81, 0.4);
-            --gradient-primary: linear-gradient(135deg, #fc2651 0%, #ff4d75 100%);
+            --shadow-glow: 0 0 20px rgba(0, 255, 255, 0.4);
+            --gradient-primary: linear-gradient(135deg, #00ffff 0%, #66ffff 100%);
             --gradient-accent: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
             --gradient-surface: linear-gradient(135deg, #1e293b 0%, #334155 100%);
         }
@@ -197,10 +183,7 @@
         }
 
         #searchBar:focus {
-            background: var(--text);
-            box-shadow: 0 0 0 3px rgba(252, 38, 81, 0.25), var(--shadow);
-            transform: translateY(-1px);
-            color: var(--glass);
+            box-shadow: 0 0 0 3px var(--primary-light), var(--shadow);
         }
 
         #searchBar::placeholder {
@@ -295,11 +278,9 @@
             overflow: hidden;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-
             /* neon glow */
             box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
             border: 2px solid rgba(0, 255, 255, 0.25);
-
             display: flex;
             flex-direction: column;
             position: relative;
@@ -308,9 +289,7 @@
         /* hover glow effect */
         .zone-item:hover {
             transform: scale(1.08);
-            box-shadow:
-                0 0 15px #0ff,
-                0 0 30px #0ff;
+            box-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
         }
 
         /* remove old overlay effect */
@@ -337,11 +316,9 @@
             text-align: center;
             font-size: 1.1em;
             background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
-
             color: white;
             border: none;
             cursor: pointer;
-
             text-shadow: 0 0 6px #0ff;
         }
 
@@ -559,11 +536,8 @@
             outline: none;
         }
 
-        #popupBody input[type="text"]:focus,
-        #popupBody input[type="file"]:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(252, 38, 81, 0.1);
-            transform: translateY(-1px);
+        #popupBody input:focus {
+            box-shadow: 0 0 0 3px var(--primary-light);
         }
 
         #settings-button {
@@ -595,7 +569,6 @@
             border-top: 1px solid var(--border);
             padding: 1rem 1rem;
             text-align: center;
-
             position: fixed;
             bottom: 0;
             left: 0;
