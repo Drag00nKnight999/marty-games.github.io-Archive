@@ -288,75 +288,67 @@
             gap: 1.5rem;
         }
 
+        /* ZONE CARD — upgraded to neon style */
         .zone-item {
-            background: var(--gradient-surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 16px;
             overflow: hidden;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            /* neon glow */
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+            border: 2px solid rgba(0, 255, 255, 0.25);
+
             display: flex;
             flex-direction: column;
             position: relative;
-            box-shadow: var(--shadow-sm);
         }
 
+        /* hover glow effect */
         .zone-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--primary);
+            transform: scale(1.08);
+            box-shadow:
+                0 0 15px #0ff,
+                0 0 30px #0ff;
         }
 
-        .zone-item:hover::before {
-            opacity: 1;
-        }
-
+        /* remove old overlay effect */
         .zone-item::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--primary-light);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            pointer-events: none;
-            z-index: 1;
+            display: none;
         }
 
+        /* IMAGE stays square like your original */
         .zone-item img {
             width: 100%;
-            aspect-ratio: 1;
+            aspect-ratio: 1 / 1;
             object-fit: cover;
             display: block;
-            background: var(--border-light);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        /* remove zoom (optional, keeps it cleaner like your first style) */
         .zone-item:hover img {
-            transform: scale(1.05);
+            transform: none;
         }
 
+        /* TITLE AREA — matches game-card title bar */
         .zone-item button {
-            background: transparent;
-            color: var(--text);
-            border: 0;
-            padding: 1.25rem 1rem;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 1.4;
+            padding: 12px;
             text-align: center;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            min-height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 2;
+            font-size: 1.1em;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
+
+            color: white;
+            border: none;
+            cursor: pointer;
+
+            text-shadow: 0 0 6px #0ff;
         }
 
+        /* remove old hover color change */
         .zone-item:hover button {
-            color: var(--primary);
-            background: rgba(252, 38, 81, 0.05);
+            color: white;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.7));
         }
 
         #zoneViewer {
