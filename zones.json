@@ -103,5 +103,16 @@
         "special": [
             "Unity"
         ]
+    },
+    {
+        "id": 9,
+        "name": "Rocket Goal",
+        "cover": "{HTML_URL}mga-unity@main/rocket-goal/icon.png",
+        "url": "{HTML_URL}mga-unity@main/rocket-goal/index.html",
+        "author": "PocketHaven Games",
+        "authorLink": "https://play.google.com/store/apps/details?id=com.pockethaven.rocketgoal",
+        "special": [
+            "Unity"
+        ]
     }
 ]
