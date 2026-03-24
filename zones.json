@@ -114,5 +114,27 @@
         "special": [
             "Unity"
         ]
+    },
+    {
+        "id": 10,
+        "name": "Slope",
+        "cover": "{HTML_URL}mga-unity@main/slope/icon.png",
+        "url": "{HTML_URL}mga-unity@main/slope/index.html",
+        "author": "Rob Kay",
+        "authorLink": "https://www.linkedin.com/in/robkaysf/",
+        "special": [
+            "Unity"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "ULTRAKILL",
+        "cover": "{HTML_URL}mga-unity@main/ultrakill/icon.png",
+        "url": "{HTML_URL}mga-unity@main/ultrakill/index.html",
+        "author": "Arsi Patala",
+        "authorLink": "https://store.steampowered.com/app/1229490/ULTRAKILL/",
+        "special": [
+            "Unity"
+        ]
     }
 ]
