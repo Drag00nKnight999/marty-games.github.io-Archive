@@ -40,7 +40,7 @@
     },
     {
         "id": 3,
-        "name": "Geometry Dash SubZero (Remake)",
+        "name": "Geometry Dash SubZero (Unity)",
         "cover": "{HTML_URL}mga-unity@main/geometry-dash-subzero/icon.png",
         "url": "{HTML_URL}mga-unity@main/geometry-dash-subzero/index.html",
         "author": "RobTop",
@@ -146,6 +146,50 @@
         "authorLink": "https://mikeklubnika.itch.io/buckshot-roulette/",
         "special": [
             "Godot"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Geometry Dash The Seven Seas",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-the-seven-seas/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-the-seven-seas/index.html",
+        "author": "RobTop",
+        "authorLink": "https://play.google.com/store/apps/details?id=com.robtopx.geometrydashmeltdown",
+        "special": [
+            "Unity"
+        ]
+    };
+    {
+        "id": 14,
+        "name": "Geometry Dash World (Unity)",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-world/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-world/index.html",
+        "author": "RobTop",
+        "authorLink": "https://play.google.com/store/apps/details?id=com.robtopx.geometrydashworld",
+        "special": [
+            "Unity"
+        ]
+    };
+    {
+        "id": 15,
+        "name": "Geometry Dash Press Start Full",
+        "cover": "{HTML_URL}mga-unity@main/geometry-dash-press-start-full/icon.png",
+        "url": "{HTML_URL}mga-unity@main/geometry-dash-press-start-full/index.html",
+        "author": "RobTop",
+        "authorLink": "https://play.google.com/store/apps/details?id=com.robtopx.geometrydashsubzero",
+        "special": [
+            "Unity"
+        ]
+    };
+    {
+        "id": 16,
+        "name": "Rocket Soccer Derby",
+        "cover": "{HTML_URL}mga-unity@main/rocket-soccer-derby/icon.png",
+        "url": "{HTML_URL}mga-unity@main/rocket-soccer-derby/index.html",
+        "author": "Rabbit Mountain",
+        "authorLink": "https://play.google.com/store/apps/details?id=com.destructioncrew.soccerleague",
+        "special": [
+            "Unity"
         ]
     }
 ]
