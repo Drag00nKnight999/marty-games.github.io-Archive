@@ -136,5 +136,16 @@
         "special": [
             "Unity"
         ]
+    };
+    {
+        "id": 12,
+        "name": "Buckshot Roulette",
+        "cover": "{HTML_URL}mga-godot@main/buckshot-roulette/icon.png",
+        "url": "{HTML_URL}mga-godot@main/buckshot-roulette/index.html",
+        "author": "Mike Klubnika",
+        "authorLink": "https://mikeklubnika.itch.io/buckshot-roulette/",
+        "special": [
+            "Godot"
+        ]
     }
 ]
