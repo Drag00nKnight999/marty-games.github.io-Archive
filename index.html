@@ -915,11 +915,17 @@
 
         function filterZones() {
             const query = searchBar.value.toLowerCase();
-            const filteredZones = zones.filter(zone => zone.name.toLowerCase().includes(query));
-            if (query.length !== 0) {
-                document.getElementById("featuredZonesWrapper").removeAttribute("open");
+
+            if (!query) {
+                displayZones(zones);
+                return;
             }
-            displayZones(filteredZones);
+
+            displayZones(
+                zones.filter(zone =>
+                    zone.name.toLowerCase().includes(query)
+                )
+            );
         }
 
         function openZone(file) {
