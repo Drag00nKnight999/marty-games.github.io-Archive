@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel Status</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #e5e5e5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .logo-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .logo-sub {
+      font-size: 0.75rem;
+      color: #888;
+      font-weight: 400;
+    }
+
+    .status-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .status-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .status-label {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .badge-online {
+      background: rgba(34, 197, 94, 0.12);
+      color: #22c55e;
+      border: 1px solid rgba(34, 197, 94, 0.25);
+    }
+
+    .badge-offline {
+      background: rgba(239, 68, 68, 0.12);
+      color: #ef4444;
+      border: 1px solid rgba(239, 68, 68, 0.25);
+    }
+
+    .badge-checking {
+      background: rgba(234, 179, 8, 0.12);
+      color: #eab308;
+      border: 1px solid rgba(234, 179, 8, 0.25);
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .dot-pulse {
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .value {
+      font-size: 0.9rem;
+      color: #e5e5e5;
+      font-weight: 500;
+    }
+
+    .footer {
+      font-size: 0.75rem;
+      color: #555;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #6366f1;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .refresh-btn {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.6rem 1rem;
+      background: #6366f1;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .refresh-btn:hover { background: #4f46e5; }
+    .refresh-btn:disabled { background: #3a3a3a; color: #666; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <div class="logo-icon">🎮</div>
+      <div>
+        <div class="logo-text">Marty Games</div>
+        <div class="logo-sub">Admin Panel Status</div>
+      </div>
+    </div>
+
+    <div class="status-row">
+      <span class="status-label">Admin Panel</span>
+      <span class="badge badge-checking" id="status-badge">
+        <span class="dot dot-pulse"></span>
+        Checking...
+      </span>
+    </div>
+
+    <div class="status-row">
+      <span class="status-label">Uptime</span>
+      <span class="value" id="uptime">—</span>
+    </div>
+
+    <div class="status-row">
+      <span class="status-label">Last Checked</span>
+      <span class="value" id="last-checked">—</span>
+    </div>
+
+    <div class="status-row">
+      <span class="status-label">Server Time</span>
+      <span class="value" id="server-time">—</span>
+    </div>
+
+    <button class="refresh-btn" id="refresh-btn" onclick="checkStatus()">Refresh</button>
+  </div>
+
+  <div class="footer">
+   <a href="https://marty-games.github.io" target="_blank">Marty Games</a>
+    <p>Made with Replit</p>
+     <a href="https://admin-marty-games--Drag00nKnight.replit.app" target="_blank">Marty-Games Admin</a>
+  </div>
+
+  <script>
+    const API_URL = "https://Admin-Marty-games-Drag00nKnight.replit.app/api/status";
+
+    function formatUptime(seconds) {
+      if (seconds < 60) return `${seconds}s`;
+      if (seconds < 3600) return `${Math.floor(seconds / 60)}m ${seconds % 60}s`;
+      const h = Math.floor(seconds / 3600);
+      const m = Math.floor((seconds % 3600) / 60);
+      return `${h}h ${m}m`;
+    }
+
+    async function checkStatus() {
+      const badge = document.getElementById("status-badge");
+      const uptimeEl = document.getElementById("uptime");
+      const lastCheckedEl = document.getElementById("last-checked");
+      const serverTimeEl = document.getElementById("server-time");
+      const btn = document.getElementById("refresh-btn");
+
+      badge.className = "badge badge-checking";
+      badge.innerHTML = '<span class="dot dot-pulse"></span> Checking...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch(API_URL, { cache: "no-store" });
+
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+        const data = await res.json();
+
+        badge.className = "badge badge-online";
+        badge.innerHTML = '<span class="dot"></span> Operational';
+        uptimeEl.textContent = formatUptime(data.uptime);
+        serverTimeEl.textContent = new Date(data.timestamp).toLocaleTimeString();
+      } catch (err) {
+        badge.className = "badge badge-offline";
+        badge.innerHTML = '<span class="dot"></span> Offline';
+        uptimeEl.textContent = "—";
+        serverTimeEl.textContent = "—";
+      }
+
+      lastCheckedEl.textContent = new Date().toLocaleTimeString();
+      btn.disabled = false;
+    }
+
+    checkStatus();
+    setInterval(checkStatus, 60000);
+  </script>
+</body>
+</html>
