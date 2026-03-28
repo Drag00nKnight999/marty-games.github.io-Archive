@@ -40,7 +40,7 @@ Welcome to **Marty Games**, the ultimate browser-based gaming destination! Play 
 marty-games.github.io(root)/
 │
 ├─ index.html           # Homepage
-├─ games.json           # Stores game card data
+├─ zones.json           # Stores game card data
 ├─ style.css            # Stylesheets for the site
 ├─ about.html           # About Us page
 ├─ embed/               # Game and app files live here
@@ -75,7 +75,7 @@ Please follow the repository structure when adding new content.
 
 ## Tips for Contributors
 
-- Add new games inside the ```games.json``` file
+- Add new games inside the ```zones.json``` file
 
 ---
 
