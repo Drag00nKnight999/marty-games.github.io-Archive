@@ -659,7 +659,6 @@
                 <select id="sortOptions" onchange="sortZones()">
                     <option value="name">Name</option>
                     <option value="id">ID (Date)</option>
-                    <option value="popular">Popular</option>
                 </select>
             </div>
             <div class="control-buttons">
@@ -741,7 +740,6 @@
         const coverURL = "https://cdn.jsdelivr.net/gh/marty-games/";
         const htmlURL = "https://cdn.jsdelivr.net/gh/marty-games/";
         let zones = [];
-        let popularityData = {};
         async function listZones() {
             try {
                 let sharesponse;
@@ -773,7 +771,6 @@
                 const json = await response.json();
                 zones = json;
                 zones[0].featured = true; // always gonna be the discord
-                await fetchPopularity();
                 sortZones();
                 const search = new URLSearchParams(window.location.search);
                 const id = search.get('id');
@@ -835,21 +832,6 @@
                 container.innerHTML = `Error loading zones: ${error}`;
             }
         }
-        async function fetchPopularity() {
-            try {
-                const response = await fetch("https://data.jsdelivr.com/v1/stats/packages/gh/gn-math/html@main/files?period=year");
-                const data = await response.json();
-                data.forEach(file => {
-                    const idMatch = file.name.match(/\/(\d+)\.html$/);
-                    if (idMatch) {
-                        const id = parseInt(idMatch[1]);
-                        popularityData[id] = file.hits.total;
-                    }
-                });
-            } catch (error) {
-                popularityData[0] = 0;
-            }
-        }
 
         function sortZones() {
             const sortBy = sortOptions.value;
@@ -857,8 +839,6 @@
                 zones.sort((a, b) => a.name.localeCompare(b.name));
             } else if (sortBy === 'id') {
                 zones.sort((a, b) => a.id - b.id);
-            } else if (sortBy === 'popular') {
-                zones.sort((a, b) => (popularityData[b.id] || 0) - (popularityData[a.id] || 0));
             }
 
             zones.sort((a, b) => (a.id === -1 ? -1 : b.id === -1 ? 1 : 0));
