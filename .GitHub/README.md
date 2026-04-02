@@ -61,7 +61,7 @@ Note: this only shows the more important files in the repository.
 
 - JSDelivr (Hosting Game Assets)
 
-- gn-math (Template)
+- Classic gn-math (Template)
 
 -  **[HTML Online Viewer](https://html.onlineviewer.net/)** (Used for compiling HTML5, CSS3, JavaScript code, and previewing web pages.)
 
