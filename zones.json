@@ -224,5 +224,16 @@
         "special": [
             "HTML5"
         ]
+    },
+    {
+        "id": 20,
+        "name": "Raft",
+        "cover": "{HTML_URL}mga-unity@main/raft/icon.png",
+        "url": "{HTML_URL}mga-unity@main/raft/index.html",
+        "author": "Redbeet Interactive",
+        "authorLink": "https://redbeetinteractive.com/",
+        "special": [
+            "Unity"
+        ]
     }
 ]
