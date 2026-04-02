@@ -202,5 +202,16 @@
         "special": [
             "Scratch"
         ]
+    },
+    {
+        "id": 18,
+        "name": "xx142-b2.exe",
+        "cover": "{HTML_URL}mga-html5@main/xx142-b2-exe/icon.png",
+        "url": "{HTML_URL}mga-html5@main/xx142-b2-exe/index.html",
+        "author": "Ben Clark & Salvatore Previti",
+        "authorLink": "https://github.com/bencoder/js13k-2019",
+        "special": [
+            "HTML5"
+        ]
     }
 ]
