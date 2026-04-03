@@ -246,5 +246,16 @@
         "special": [
             "Apps"
         ]
+    },
+    {
+        "id": 22,
+        "name": "Five Nights at Epstein's",
+        "cover": "{HTML_URL}mga-unity@main/five-nights-at-epsteins/icon.png",
+        "url": "{HTML_URL}mga-unity@main/five-nights-at-epsteins/index.html",
+        "author": "Evan Productions",
+        "authorLink": "#",
+        "special": [
+            "Unity"
+        ]
     }
 ]
