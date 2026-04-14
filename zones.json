@@ -260,9 +260,9 @@
     },
     {
         "id": 23,
-        "name": "[!] A.I. Chat",
-        "cover": "{HTML_URL}mga-apps@main/ai-chat/icon.png",
-        "url": "{HTML_URL}mga-apps@main/ai-chat/index.html",
+        "name": "[!] ChatGPT",
+        "cover": "{HTML_URL}mga-apps@main/ai-chatbot/icon.png",
+        "url": "{HTML_URL}mga-apps@main/ai-chatbot/index.html",
         "author": "Marty Games",
         "authorLink": "https://marty-games.github.io/",
         "special": [
