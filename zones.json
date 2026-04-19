@@ -175,8 +175,8 @@
         "name": "Geometry Dash Press Start Full",
         "cover": "{HTML_URL}mga-unity@main/geometry-dash-press-start-full/icon.png",
         "url": "{HTML_URL}mga-unity@main/geometry-dash-press-start-full/index.html",
-        "author": "RobTop",
-        "authorLink": "https://play.google.com/store/apps/details?id=com.robtopx.geometrydashsubzero",
+        "author": "Unknown Developer",
+        "authorLink": "https://marty-games.github.io/",
         "special": [
             "Unity"
         ]
@@ -275,6 +275,17 @@
         "cover": "{HTML_URL}mga-apps@main/google/icon.png",
         "url": "{HTML_URL}mga-apps@main/google/index.html",
         "author": "Marty Games",
+        "authorLink": "https://marty-games.github.io/",
+        "special": [
+            "Apps"
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Geometry Dash Deadlocked",
+        "cover": "{HTML_URL}mga-apps@main/geometry-dash-deadlocked/icon.png",
+        "url": "{HTML_URL}mga-apps@main/geometry-dash-deadlocked/index.html",
+        "author": "Unknown Developer",
         "authorLink": "https://marty-games.github.io/",
         "special": [
             "Apps"
